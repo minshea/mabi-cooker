@@ -1,0 +1,38 @@
+﻿<Window x:Class="MabiCooker2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Mabinogi Cooker v2" Height="194.333" Width="412" KeyUp="Window_KeyUp" ResizeMode="NoResize" Topmost="True" Closing="Window_Closing" AllowsTransparency="True" WindowStyle="None" Background="{x:Null}" Foreground="{x:Null}" BorderBrush="#FF718EDC" BorderThickness="1">
+
+    <Window.CommandBindings>
+        <CommandBinding Command="{x:Static SystemCommands.CloseWindowCommand}" CanExecute="CommandBinding_CanExecute_1" Executed="CommandBinding_Executed_1" />
+        <CommandBinding Command="{x:Static SystemCommands.MinimizeWindowCommand}" CanExecute="CommandBinding_CanExecute_1" Executed="CommandBinding_Executed_3" />
+    </Window.CommandBindings>
+
+    <Grid>
+
+        <Rectangle HorizontalAlignment="Left" Height="68" Margin="25,41,0,0" Stroke="#FFE2E236" VerticalAlignment="Top" Width="68" />
+        <Rectangle HorizontalAlignment="Left" Height="68" Margin="105,41,0,0" Stroke="#FFE2E236" VerticalAlignment="Top" Width="68" />
+        <Rectangle HorizontalAlignment="Left" Height="68" Margin="185,41,0,0" Stroke="#FFE2E236" VerticalAlignment="Top" Width="68" />
+        <Rectangle x:Name="Bar1" Fill="Firebrick" HorizontalAlignment="Left" Height="10" Margin="25,156,0,0" VerticalAlignment="Top" Width="100" />
+        <Rectangle x:Name="Bar2" Fill="DodgerBlue" HorizontalAlignment="Left" Height="10" Margin="25,156,0,0" VerticalAlignment="Top" Width="100" />
+        <Rectangle x:Name="Bar3" Fill="Turquoise" HorizontalAlignment="Left" Height="10" Margin="25,156,0,0" VerticalAlignment="Top" Width="100" />
+        <ComboBox x:Name="ComboBoxRecipes" HorizontalAlignment="Left" Margin="285,39,0,0" VerticalAlignment="Top" Width="100" ItemsSource="{Binding}" SelectionChanged="ComboBoxRecipes_SelectionChanged" PreviewKeyDown="ComboBoxRecipes_PreviewKeyDown">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding Name}" />
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+        <TextBox x:Name="TextBoxIngredient1" HorizontalAlignment="Left" Height="23" Margin="285,66,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="30" PreviewTextInput="TextBoxIngredient_PreviewTextInput" TextChanged="TextBoxIngredient_TextChanged" />
+        <TextBox x:Name="TextBoxIngredient2" HorizontalAlignment="Left" Height="23" Margin="320,66,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="30" TextChanged="TextBoxIngredient_TextChanged" PreviewTextInput="TextBoxIngredient_PreviewTextInput" />
+        <TextBox x:Name="TextBoxIngredient3" HorizontalAlignment="Left" Height="23" Margin="355,66,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="30" IsEnabled="False" />
+
+        <Canvas>
+            <Rectangle Fill="#FF718EDC" HorizontalAlignment="Left" Height="22" Stroke="#FF718EDC" VerticalAlignment="Top" Width="411" MouseLeftButtonDown="Rectangle_MouseLeftButtonDown" Canvas.Left="-1" Canvas.Top="-1" />
+            <Label Content="Mabinogi Cooker 2" HorizontalAlignment="Left" Margin="4,-4,0,0" VerticalAlignment="Top" Foreground="White" />
+
+            <Button Command="{x:Static SystemCommands.CloseWindowCommand}" Content="X" Canvas.Left="386" Height="20" Width="20" FontSize="11" FontWeight="Bold" />
+            <Button Command="{x:Static SystemCommands.MinimizeWindowCommand}" Content="_" Canvas.Left="363" Width="20" Height="20" FontSize="11" FontWeight="Bold" />
+        </Canvas>
+    </Grid>
+</Window>
