@@ -1,7 +1,7 @@
 ﻿<Window x:Class="MabiCooker.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Mabinogi Cooker v2" Height="194.333" Width="412" KeyUp="Window_KeyUp" ResizeMode="NoResize" Topmost="True" Closing="Window_Closing" AllowsTransparency="True" WindowStyle="None" Background="{x:Null}" Foreground="{x:Null}" BorderBrush="#FF718EDC" BorderThickness="1">
+        Title="Mabinogi Cooker v2" Height="210" Width="420" KeyUp="Window_KeyUp" ResizeMode="NoResize" Topmost="True" Closing="Window_Closing" AllowsTransparency="True" WindowStyle="None" Background="{x:Null}" Foreground="{x:Null}" BorderBrush="#FF718EDC" BorderThickness="1">
 
     <Window.CommandBindings>
         <CommandBinding Command="{x:Static SystemCommands.CloseWindowCommand}" CanExecute="CommandBinding_CanExecute_1" Executed="CommandBinding_Executed_1" />
@@ -10,12 +10,12 @@
 
     <Grid>
 
-        <Rectangle HorizontalAlignment="Left" Height="68" Margin="25,41,0,0" Stroke="#FFE2E236" VerticalAlignment="Top" Width="68" />
-        <Rectangle HorizontalAlignment="Left" Height="68" Margin="105,41,0,0" Stroke="#FFE2E236" VerticalAlignment="Top" Width="68" />
-        <Rectangle HorizontalAlignment="Left" Height="68" Margin="185,41,0,0" Stroke="#FFE2E236" VerticalAlignment="Top" Width="68" />
-        <Rectangle x:Name="Bar1" Fill="Firebrick" HorizontalAlignment="Left" Height="10" Margin="25,156,0,0" VerticalAlignment="Top" Width="100" />
-        <Rectangle x:Name="Bar2" Fill="DodgerBlue" HorizontalAlignment="Left" Height="10" Margin="25,156,0,0" VerticalAlignment="Top" Width="100" />
-        <Rectangle x:Name="Bar3" Fill="Turquoise" HorizontalAlignment="Left" Height="10" Margin="25,156,0,0" VerticalAlignment="Top" Width="100" />
+        <Rectangle HorizontalAlignment="Left" Height="97" Margin="25,41,0,0" Stroke="#FFE2E236" VerticalAlignment="Top" Width="73" />
+        <Rectangle HorizontalAlignment="Left" Height="97" Margin="110,41,0,0" Stroke="#FFE2E236" VerticalAlignment="Top" Width="73" />
+        <Rectangle HorizontalAlignment="Left" Height="97" Margin="195,41,0,0" Stroke="#FFE2E236" VerticalAlignment="Top" Width="73" />
+        <Rectangle x:Name="Bar1" Fill="Firebrick" HorizontalAlignment="Left" Height="10" Margin="25,182,0,0" VerticalAlignment="Top" Width="100" />
+        <Rectangle x:Name="Bar2" Fill="DodgerBlue" HorizontalAlignment="Left" Height="10" Margin="25,182,0,0" VerticalAlignment="Top" Width="100" />
+        <Rectangle x:Name="Bar3" Fill="Turquoise" HorizontalAlignment="Left" Height="10" Margin="25,182,0,0" VerticalAlignment="Top" Width="100" />
         <ComboBox x:Name="ComboBoxRecipes" HorizontalAlignment="Left" Margin="285,39,0,0" VerticalAlignment="Top" Width="100" ItemsSource="{Binding}" SelectionChanged="ComboBoxRecipes_SelectionChanged" PreviewKeyDown="ComboBoxRecipes_PreviewKeyDown">
             <ComboBox.ItemTemplate>
                 <DataTemplate>

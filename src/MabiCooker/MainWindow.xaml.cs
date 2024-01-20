@@ -13,8 +13,8 @@ namespace MabiCooker
     /// <summary>Interaction logic for MainWindow.xaml</summary>
     public partial class MainWindow : Window
     {
-        private double _progressBarMargin = 23;
-        private double _progressBarWidthMultiplier = 2.32;
+        private const double ProgressBarMargin = 25; //23;
+        private const double ProgressBarWidthMultiplier = 2.43; //2.32;
         private bool _preventChange;
 
         public MainWindow()
@@ -117,12 +117,12 @@ namespace MabiCooker
 
         private void DrawBars(double num1, double num2, double num3)
         {
-            Bar1.Width = (int)Math.Round(num1 * _progressBarWidthMultiplier);
-            Bar2.Width = (int)Math.Round(num2 * _progressBarWidthMultiplier);
-            Bar3.Width = (int)Math.Round(num3 * _progressBarWidthMultiplier);
+            Bar1.Width = (int)Math.Round(num1 * ProgressBarWidthMultiplier);
+            Bar2.Width = (int)Math.Round(num2 * ProgressBarWidthMultiplier);
+            Bar3.Width = (int)Math.Round(num3 * ProgressBarWidthMultiplier);
 
             var top = Bar1.Margin.Top;
-            Bar1.Margin = new Thickness(_progressBarMargin, top, 0, 0);
+            Bar1.Margin = new Thickness(ProgressBarMargin, top, 0, 0);
             Bar2.Margin = new Thickness(Bar1.Margin.Left + Bar1.Width, top, 0, 0);
             Bar3.Margin = new Thickness(Bar2.Margin.Left + Bar2.Width, top, 0, 0);
         }
