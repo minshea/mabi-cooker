@@ -1,4 +1,4 @@
-﻿namespace MabiCooker2
+﻿namespace MabiCooker
 {
     public class Recipe
     {

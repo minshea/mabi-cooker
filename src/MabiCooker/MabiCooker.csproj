@@ -7,8 +7,8 @@
     <ProjectGuid>{51EE8322-428B-4498-BF9C-7C5B0A321FC5}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MabiCooker2</RootNamespace>
-    <AssemblyName>MabiCooker2</AssemblyName>
+    <RootNamespace>MabiCooker</RootNamespace>
+    <AssemblyName>MabiCooker</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
